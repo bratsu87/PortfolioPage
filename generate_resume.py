@@ -182,12 +182,12 @@ skills_table.setStyle(TableStyle([
 story.append(skills_table)
 
 story += section("Professional Experience")
-story.append(p("Network Operations Center Engineer | Humana | Louisville, KY | April 2024 - April 2026", styles["Role"]))
+story.append(p("Network Operations Center Engineer | Humana | Louisville, KY | April 2024 - Present", styles["Role"]))
 story += bullets([
-    "Monitored enterprise network activity, server health, and application signals across large-scale environments supporting 50,000+ servers and services.",
-    "Investigated alerts and outage tickets using SolarWinds, Dynatrace, ServiceNow, and related operational tools.",
-    "Supported DNS and firewall change workflows while maintaining clear documentation, escalation context, and service-impact awareness.",
-    "Applied structured troubleshooting across connectivity, routing, firewall, storage, services, containers/VMs, and application layers.",
+    "Monitor enterprise network activity, server health, and application signals across large-scale environments supporting 50,000+ servers and services.",
+    "Investigate alerts and outage tickets using SolarWinds, Dynatrace, ServiceNow, and related operational tools.",
+    "Support DNS and firewall change workflows while maintaining clear documentation, escalation context, and service-impact awareness.",
+    "Apply structured troubleshooting across connectivity, routing, firewall, storage, services, containers/VMs, and application layers.",
 ])
 
 story.append(p("Global Inside Partner Development Manager | Microsoft | Remote | Jan 2022 - Dec 2023", styles["Role"]))
@@ -198,20 +198,20 @@ story += bullets([
 ])
 
 story += section("Selected Projects")
-story.append(p("NetOps Command Center", styles["Role"]))
+story.append(p("Bratsu SecureOps", styles["Role"]))
 story += bullets([
-    "Built a local-first operations dashboard for tracking homelab assets, service health, incidents, and operational notes.",
-    "Designed the project around practical infrastructure visibility, repeatable troubleshooting, and clear environment documentation.",
+    "Developing an AI-assisted managed IT and cybersecurity platform for small-business asset visibility, findings, guided remediation, and auditable workflows.",
+    "Designed around secure deployment, maintainable automation, and practical operational evidence rather than opaque AI actions.",
 ])
 story.append(p("Proxmox Homelab Infrastructure", styles["Role"]))
 story += bullets([
     "Maintain a production-style Proxmox environment with VMs, LXCs, Pi-hole DNS, Tailscale, Nginx reverse proxying, monitoring, backups, and self-hosted AI tooling.",
     "Use the lab to practice secure configuration, incident-style troubleshooting, service recovery, automation, and infrastructure documentation.",
 ])
-story.append(p("Self-Hosted AI and Automation Workbench", styles["Role"]))
+story.append(p("Bratsu Agent, Ansible Console, and Observability", styles["Role"]))
 story += bullets([
-    "Operate local AI tooling with Ollama, Open WebUI, coding models, web terminal access, and hardened access rules.",
-    "Use the environment to support research, coding, writing, planning, internal workflows, and automation experiments.",
+    "Operate private agent infrastructure spanning a Proxmox control plane and MSI AI workstation with persistent project context and controlled remote access.",
+    "Built a Raspberry Pi Ansible control surface and Prometheus/Grafana fleet monitoring for repeatable maintenance and evidence-based recovery.",
 ])
 
 story += section("Education")

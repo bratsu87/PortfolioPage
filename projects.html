@@ -9,6 +9,10 @@
   <meta property="og:description" content="Infrastructure, cybersecurity, analytics, and development projects." />
   <meta property="og:url" content="https://brandontsueda.com/projects.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.brandontsueda.com/Assets/Professional_Headshot.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://www.brandontsueda.com/projects.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
@@ -37,19 +41,18 @@
 
     <section class="project-grid featured-projects">
       <article class="project-card featured">
-        <div class="project-icon"><i class="bi bi-router"></i></div>
-        <h2>NetOps Command Center</h2>
+        <div class="project-icon"><i class="bi bi-shield-check"></i></div>
+        <h2>Bratsu SecureOps</h2>
         <p>
-          Local-first network operations dashboard for tracking homelab assets, service health,
-          incidents, and operational notes. Built as a practical command surface for infrastructure
-          visibility and repeatable troubleshooting.
+          AI-assisted managed IT and cybersecurity platform designed for small-business operations.
+          Brings asset visibility, security findings, guided remediation, and auditable operational
+          workflows into one maintainable system.
         </p>
         <div class="tech-badges">
-          <span>React</span><span>Vite</span><span>FastAPI</span><span>Python</span><span>Monitoring</span>
+          <span>Cybersecurity</span><span>Managed IT</span><span>AI</span><span>Automation</span><span>Operations</span>
         </div>
         <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="netops-modal">Details</button>
-          <a href="https://github.com/BrandonTsueda/netops-command-center" class="text-link" target="_blank" rel="noopener noreferrer">Repository</a>
+          <button class="modal-button secondary" type="button" data-modal-target="secureops-modal">Details</button>
         </div>
       </article>
 
@@ -137,17 +140,49 @@
 
       <article class="project-card">
         <div class="project-icon"><i class="bi bi-cpu"></i></div>
-        <h2>Self-Hosted AI Workbench</h2>
+        <h2>Bratsu Agent &amp; Nemo-Claw</h2>
         <p>
-          Local AI environment with Ollama, Open WebUI, coding models, web terminal access,
-          and hardened access rules. Built to support research, coding, writing, planning,
-          and internal agent workflows.
+          Private agent environment spanning local infrastructure and an MSI AI workstation.
+          Designed for persistent project context, tool-assisted operations, secure remote access,
+          and recoverable automation rather than a generic chat interface.
         </p>
         <div class="tech-badges">
-          <span>Ollama</span><span>Open WebUI</span><span>Docker</span><span>Security</span>
+          <span>AI Agents</span><span>Local-First</span><span>Proxmox</span><span>Windows</span><span>Security</span>
         </div>
         <div class="inline-actions">
           <button class="modal-button secondary" type="button" data-modal-target="ai-modal">Details</button>
+        </div>
+      </article>
+
+      <article class="project-card featured">
+        <div class="project-icon"><i class="bi bi-play-btn"></i></div>
+        <h2>Ansible Touchscreen Console</h2>
+        <p>
+          Raspberry Pi 5 control surface for running categorized infrastructure playbooks,
+          following execution in real time, stopping unsafe runs, and reviewing clear completion
+          outcomes across Linux and Windows systems.
+        </p>
+        <div class="tech-badges">
+          <span>Ansible</span><span>Docker</span><span>Raspberry Pi</span><span>Linux</span><span>Windows</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="ansible-modal">Details</button>
+        </div>
+      </article>
+
+      <article class="project-card featured">
+        <div class="project-icon"><i class="bi bi-activity"></i></div>
+        <h2>Homelab Observability Platform</h2>
+        <p>
+          Fleet monitoring built around Prometheus and Grafana with host-level CPU, memory, disk,
+          network, GPU, service availability, and local-readiness views. Alerting is tied to
+          actionable dependencies instead of raw metric noise.
+        </p>
+        <div class="tech-badges">
+          <span>Prometheus</span><span>Grafana</span><span>Exporters</span><span>Alerting</span><span>Telemetry</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="observability-modal">Details</button>
         </div>
       </article>
 
@@ -185,22 +220,22 @@
     </section>
   </main>
 
-  <dialog class="detail-modal" id="netops-modal" aria-labelledby="netops-title">
+  <dialog class="detail-modal" id="secureops-modal" aria-labelledby="secureops-title">
     <div class="modal-shell">
       <div class="modal-header">
-        <div><p class="eyebrow">Operations Platform</p><h2 id="netops-title">NetOps Command Center</h2></div>
+        <div><p class="eyebrow">Security Operations Platform</p><h2 id="secureops-title">Bratsu SecureOps</h2></div>
         <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
       </div>
       <div class="modal-body">
-        <p>A local-first dashboard for service health, asset context, incidents, configuration notes, and repeatable triage. The goal is to make homelab operations feel closer to a small NOC workflow: signals, ownership, checks, and remediation history in one place.</p>
-        <ul>
-          <li>Built around real device and service inventory rather than sample data.</li>
-          <li>Includes alert context, incident tracking, and operational notes for follow-through.</li>
-          <li>Designed for future SecureOps-style managed IT workflows.</li>
-        </ul>
-        <div class="modal-actions">
-          <a class="button primary" href="https://github.com/BrandonTsueda/netops-command-center" target="_blank" rel="noopener noreferrer">View repository</a>
+        <p>An AI-assisted managed IT and cybersecurity platform built for small organizations that need practical visibility and defensible operational workflows without enterprise-scale complexity.</p>
+        <div class="architecture-flow" aria-label="Bratsu SecureOps architecture">
+          <span>Managed endpoints</span><i class="bi bi-arrow-right"></i><span>SecureOps control plane</span><i class="bi bi-arrow-right"></i><span>Evidence &amp; remediation</span>
         </div>
+        <ul>
+          <li>Unifies asset context, findings, remediation guidance, and operational evidence.</li>
+          <li>Uses AI as an assistive layer while keeping actions reviewable and auditable.</li>
+          <li>Developed with secure deployment, maintainability, and small-business usability in mind.</li>
+        </ul>
       </div>
     </div>
   </dialog>
@@ -305,15 +340,58 @@
   <dialog class="detail-modal" id="ai-modal" aria-labelledby="ai-title">
     <div class="modal-shell">
       <div class="modal-header">
-        <div><p class="eyebrow">Self-Hosted AI</p><h2 id="ai-title">Self-Hosted AI Workbench</h2></div>
+        <div><p class="eyebrow">Private Agent Infrastructure</p><h2 id="ai-title">Bratsu Agent &amp; Nemo-Claw</h2></div>
         <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
       </div>
       <div class="modal-body">
-        <p>A local AI environment for coding, writing, troubleshooting, and research workflows. The workbench is part experimentation and part infrastructure practice: models, containers, access rules, and enough observability to know when it is behaving.</p>
+        <p>A private agent environment that connects project context, operational tools, and local infrastructure across a Proxmox-hosted control plane and MSI AI workstation.</p>
+        <div class="architecture-flow" aria-label="Bratsu Agent architecture">
+          <span>Project context</span><i class="bi bi-arrow-right"></i><span>Agent control plane</span><i class="bi bi-arrow-right"></i><span>MSI &amp; homelab tools</span>
+        </div>
         <ul>
-          <li>Built around Ollama, Open WebUI, Docker, and controlled local access.</li>
-          <li>Used to support coding, documentation, and operational workflows.</li>
-          <li>Reinforces the same deployment habits as other self-hosted services.</li>
+          <li>Maintains persistent context and repeatable operating knowledge across systems.</li>
+          <li>Supports coding, documentation, research, and infrastructure troubleshooting.</li>
+          <li>Uses controlled remote access, recoverable configuration, and service-level verification.</li>
+        </ul>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="detail-modal" id="ansible-modal" aria-labelledby="ansible-title">
+    <div class="modal-shell">
+      <div class="modal-header">
+        <div><p class="eyebrow">Infrastructure Automation</p><h2 id="ansible-title">Ansible Touchscreen Console</h2></div>
+        <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="modal-body">
+        <p>A purpose-built Raspberry Pi 5 interface that turns infrastructure playbooks into a touch-friendly operational control surface.</p>
+        <div class="architecture-flow" aria-label="Ansible console architecture">
+          <span>Touch console</span><i class="bi bi-arrow-right"></i><span>Ansible runner</span><i class="bi bi-arrow-right"></i><span>Managed fleet</span>
+        </div>
+        <ul>
+          <li>Organizes maintenance, updates, discovery, health checks, and recovery playbooks by category.</li>
+          <li>Streams execution logs and reports explicit success, failure, cancellation, and skipped-host outcomes.</li>
+          <li>Protects the Ansible control node from broad fleet jobs and supports controlled Linux and Windows maintenance.</li>
+        </ul>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="detail-modal" id="observability-modal" aria-labelledby="observability-title">
+    <div class="modal-shell">
+      <div class="modal-header">
+        <div><p class="eyebrow">Observability</p><h2 id="observability-title">Homelab Observability Platform</h2></div>
+        <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="modal-body">
+        <p>A practical monitoring platform for understanding host health, service reachability, performance trends, and local readiness across a mixed homelab fleet.</p>
+        <div class="architecture-flow" aria-label="Observability platform architecture">
+          <span>Fleet exporters</span><i class="bi bi-arrow-right"></i><span>Prometheus</span><i class="bi bi-arrow-right"></i><span>Grafana &amp; alerts</span>
+        </div>
+        <ul>
+          <li>Tracks Linux, Windows, Proxmox, GPU, storage, service, and network telemetry.</li>
+          <li>Provides fleet-overview and host-detail visualizations instead of exposing raw Prometheus queries.</li>
+          <li>Routes alerts around actionable dependency failures and verifies recovery at the affected service.</li>
         </ul>
       </div>
     </div>

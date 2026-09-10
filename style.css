@@ -594,6 +594,32 @@ main,
   margin-top: 1.25rem;
 }
 
+.architecture-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 0.55rem;
+  align-items: center;
+  margin: 1rem 0 1.2rem;
+}
+
+.architecture-flow span {
+  min-height: 4rem;
+  display: grid;
+  place-items: center;
+  padding: 0.75rem;
+  border: 1px solid rgba(77, 179, 255, 0.3);
+  border-radius: var(--radius);
+  color: #d6edff;
+  background: var(--accent-soft);
+  text-align: center;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.architecture-flow i {
+  color: var(--success);
+}
+
 .psa-container {
   margin-top: 1rem;
 }
@@ -687,5 +713,14 @@ main,
   .credential-grid,
   .modal-grid {
     grid-template-columns: 1fr;
+  }
+
+  .architecture-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-flow i {
+    transform: rotate(90deg);
+    justify-self: center;
   }
 }
