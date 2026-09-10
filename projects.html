@@ -123,22 +123,6 @@
       </article>
 
       <article class="project-card">
-        <div class="project-icon"><i class="bi bi-key"></i></div>
-        <h2>Password Strength Analyzer</h2>
-        <p>
-          Browser-based password analysis tool with real-time strength scoring, entropy estimation,
-          checklist feedback, dark mode, and a polished local-only security education interface.
-        </p>
-        <div class="tech-badges">
-          <span>JavaScript</span><span>HTML</span><span>CSS</span><span>Security Awareness</span>
-        </div>
-        <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="password-modal">Details</button>
-          <a href="https://github.com/BrandonTsueda/PasswordChecker" class="text-link" target="_blank" rel="noopener noreferrer">Repository</a>
-        </div>
-      </article>
-
-      <article class="project-card">
         <div class="project-icon"><i class="bi bi-cpu"></i></div>
         <h2>Bratsu Agent &amp; Nemo-Claw</h2>
         <p>
@@ -217,6 +201,47 @@
           <a href="story-generator.html" class="text-link">Project page</a>
         </div>
       </article>
+    </section>
+
+    <section class="interactive-section" aria-labelledby="interactive-title">
+      <div class="section-heading category-heading">
+        <p class="eyebrow">Interactive Lab</p>
+        <h2 id="interactive-title">Try the work instead of only reading about it.</h2>
+        <p>These demonstrations run entirely in your browser. Entered values are not transmitted, stored, or logged.</p>
+      </div>
+
+      <div class="project-grid interactive-grid">
+        <article class="project-card interactive-card">
+          <div class="project-icon"><i class="bi bi-key"></i></div>
+          <h2>Password Strength Analyzer</h2>
+          <p>Explore how length, character variety, repetition, and common patterns affect estimated password strength.</p>
+          <div class="tech-badges"><span>Local-Only</span><span>Security</span><span>JavaScript</span></div>
+          <div class="inline-actions">
+            <button class="modal-button primary" type="button" data-modal-target="password-modal">Launch tool</button>
+            <a href="https://github.com/BrandonTsueda/PasswordChecker" class="text-link" target="_blank" rel="noopener noreferrer">Repository</a>
+          </div>
+        </article>
+
+        <article class="project-card interactive-card">
+          <div class="project-icon"><i class="bi bi-diagram-3"></i></div>
+          <h2>IPv4 Subnet Calculator</h2>
+          <p>Calculate masks, network and broadcast addresses, usable ranges, and address counts from CIDR notation.</p>
+          <div class="tech-badges"><span>Networking</span><span>IPv4</span><span>Local-Only</span></div>
+          <div class="inline-actions">
+            <button class="modal-button primary" type="button" data-modal-target="subnet-modal">Launch tool</button>
+          </div>
+        </article>
+
+        <article class="project-card interactive-card">
+          <div class="project-icon"><i class="bi bi-activity"></i></div>
+          <h2>Incident Triage Simulator</h2>
+          <p>Review realistic operational signals, select the most likely failure, and compare your reasoning with the evidence.</p>
+          <div class="tech-badges"><span>NOC</span><span>Troubleshooting</span><span>Interactive</span></div>
+          <div class="inline-actions">
+            <button class="modal-button primary" type="button" data-modal-target="triage-modal">Start scenario</button>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
@@ -324,15 +349,63 @@
         <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
       </div>
       <div class="modal-body">
-        <p>A local browser tool for explaining password quality in a way users can understand. It keeps the analysis client-side and turns security feedback into concrete guidance.</p>
-        <ul>
-          <li>Real-time scoring, checklist feedback, and entropy-oriented guidance.</li>
-          <li>Dark-mode interface with no server-side password handling.</li>
-          <li>Useful as a small example of practical security communication.</li>
-        </ul>
+        <p class="privacy-note"><i class="bi bi-shield-lock"></i> Local-only demonstration. Nothing entered here leaves your browser. Use a sample—not a real password.</p>
+        <form class="tool-panel" id="password-tool" novalidate>
+          <label for="password-input">Sample password</label>
+          <div class="input-with-action">
+            <input id="password-input" type="password" autocomplete="new-password" spellcheck="false" placeholder="Try a sample password" />
+            <button class="button secondary compact" id="password-toggle" type="button" aria-pressed="false">Show</button>
+          </div>
+          <div class="strength-track" aria-hidden="true"><span id="password-strength-fill"></span></div>
+          <div class="tool-result" id="password-result" aria-live="polite">Enter a sample to begin.</div>
+          <ul class="check-list" id="password-checks" aria-label="Password checks"></ul>
+        </form>
         <div class="modal-actions">
-          <a class="button primary" href="https://github.com/BrandonTsueda/PasswordChecker" target="_blank" rel="noopener noreferrer">View repository</a>
+          <a class="button secondary" href="https://github.com/BrandonTsueda/PasswordChecker" target="_blank" rel="noopener noreferrer">View full repository</a>
         </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="detail-modal" id="subnet-modal" aria-labelledby="subnet-title">
+    <div class="modal-shell">
+      <div class="modal-header">
+        <div><p class="eyebrow">Interactive Networking</p><h2 id="subnet-title">IPv4 Subnet Calculator</h2></div>
+        <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="modal-body">
+        <p class="privacy-note"><i class="bi bi-shield-lock"></i> Calculations run locally. Addresses are not transmitted or stored.</p>
+        <form class="tool-panel" id="subnet-tool" novalidate>
+          <label for="cidr-input">IPv4 address and prefix</label>
+          <div class="input-with-action">
+            <input id="cidr-input" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="192.168.68.72/24" aria-describedby="cidr-help" />
+            <button class="button primary compact" type="submit">Calculate</button>
+          </div>
+          <small id="cidr-help">Example: 192.168.68.72/24</small>
+          <div class="result-grid" id="subnet-result" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="detail-modal" id="triage-modal" aria-labelledby="triage-title">
+    <div class="modal-shell">
+      <div class="modal-header">
+        <div><p class="eyebrow">Interactive Operations</p><h2 id="triage-title">Incident Triage Simulator</h2></div>
+        <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="scenario-meta"><span id="scenario-number">Scenario 1 of 3</span><span id="scenario-score">Score: 0</span></div>
+        <section class="tool-panel" aria-live="polite">
+          <h3 id="scenario-title">Loading scenario...</h3>
+          <p id="scenario-summary"></p>
+          <div class="signal-list" id="scenario-signals"></div>
+          <fieldset class="choice-list" id="scenario-choices">
+            <legend>What is the most likely root cause?</legend>
+          </fieldset>
+          <div class="tool-result hidden" id="scenario-result"></div>
+          <button class="button primary hidden" id="next-scenario" type="button">Next scenario</button>
+        </section>
       </div>
     </div>
   </dialog>

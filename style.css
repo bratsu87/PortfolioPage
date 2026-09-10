@@ -443,6 +443,33 @@ main,
   padding-top: 1rem;
 }
 
+.interactive-section {
+  margin: 4rem 0 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.category-heading {
+  max-width: 760px;
+}
+
+.category-heading p:last-child {
+  color: var(--muted);
+}
+
+.interactive-grid {
+  margin-top: 1.5rem;
+}
+
+.interactive-card {
+  min-height: 19rem;
+  border-color: rgba(99, 211, 145, 0.28);
+}
+
+.interactive-card .project-icon {
+  color: var(--success);
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -595,6 +622,209 @@ main,
   margin-top: 1.25rem;
 }
 
+.privacy-note {
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(99, 211, 145, 0.3);
+  border-radius: var(--radius);
+  color: #c9f7da !important;
+  background: rgba(99, 211, 145, 0.08);
+}
+
+.privacy-note i {
+  margin-right: 0.35rem;
+}
+
+.tool-panel {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.tool-panel label,
+.choice-list legend {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tool-panel input {
+  width: 100%;
+  min-width: 0;
+  padding: 0.78rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.24);
+  font: inherit;
+}
+
+.tool-panel input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.tool-panel small {
+  color: var(--subtle);
+}
+
+.input-with-action {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.65rem;
+}
+
+.button.compact {
+  min-height: 0;
+  padding: 0.65rem 0.9rem;
+}
+
+.strength-track {
+  height: 0.7rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #273548;
+}
+
+#password-strength-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--danger);
+  transition: width 180ms ease, background 180ms ease;
+}
+
+.tool-result {
+  padding: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.tool-result.success {
+  border-color: rgba(99, 211, 145, 0.38);
+  color: #c9f7da;
+  background: rgba(99, 211, 145, 0.08);
+}
+
+.tool-result.error {
+  border-color: rgba(255, 123, 114, 0.4);
+  color: #ffd0cc;
+  background: rgba(255, 123, 114, 0.08);
+}
+
+.check-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  padding: 0.55rem 0.65rem;
+  border-radius: 6px;
+  color: var(--subtle);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.check-list li.pass {
+  color: #c9f7da;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.result-item {
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.result-item span,
+.result-item strong {
+  display: block;
+}
+
+.result-item span {
+  color: var(--subtle);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.result-item strong {
+  margin-top: 0.25rem;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.scenario-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.signal-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.signal-item {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.7rem;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+  background: rgba(77, 179, 255, 0.06);
+}
+
+.signal-item strong {
+  color: var(--text);
+}
+
+.choice-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.choice-button {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.035);
+  text-align: left;
+  cursor: pointer;
+}
+
+.choice-button:hover,
+.choice-button:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.choice-button:disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.hidden {
+  display: none !important;
+}
+
 .architecture-flow {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
@@ -712,8 +942,19 @@ main,
 
   .skill-grid,
   .credential-grid,
-  .modal-grid {
+  .modal-grid,
+  .check-list,
+  .result-grid {
     grid-template-columns: 1fr;
+  }
+
+  .input-with-action {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-item {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
 
   .architecture-flow {
