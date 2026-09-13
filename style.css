@@ -24,6 +24,13 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 body {
@@ -118,10 +125,10 @@ main,
 
 .hero-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
-  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
-  padding: clamp(3rem, 8vw, 5.5rem) 0 2rem;
+  padding: clamp(2rem, 5vw, 3.5rem) 0 1.5rem;
 }
 
 .hero-copy {
@@ -141,9 +148,10 @@ main,
 .page-hero h1 {
   margin: 0;
   max-width: 960px;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  line-height: 1.03;
-  letter-spacing: 0;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 
 .hero-lead,
@@ -311,7 +319,7 @@ main,
   grid-template-columns: 0.36fr minmax(0, 0.64fr);
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: start;
-  padding: clamp(3rem, 7vw, 5rem) 0;
+  padding: clamp(2rem, 4vw, 3rem) 0;
 }
 
 .section-grid h2,
@@ -319,8 +327,9 @@ main,
 .contact-section h2,
 .detail-copy h2 {
   margin: 0;
-  font-size: clamp(1.75rem, 3.5vw, 2.65rem);
-  line-height: 1.08;
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+  line-height: 1.2;
+  text-wrap: balance;
 }
 
 .content-block {
@@ -350,8 +359,8 @@ main,
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 0.38fr 0.62fr;
-  gap: 1.25rem;
+  grid-template-columns: minmax(0, 0.34fr) minmax(0, 0.66fr);
+  gap: 2rem;
   padding: 1.3rem 0;
   border-top: 1px solid var(--line);
 }
@@ -366,12 +375,36 @@ main,
 
 .timeline-item p {
   margin: 0;
-  color: var(--subtle);
+  color: var(--muted);
 }
 
 .timeline-item ul {
   margin: 0;
   padding-left: 1.1rem;
+}
+
+.timeline-item li + li {
+  margin-top: 0.5rem;
+}
+
+.skills-section {
+  padding: 2rem 0;
+}
+
+.skills-section > div:first-child {
+  margin-bottom: 1.5rem;
+}
+
+.skills-section .skill-grid,
+.credential-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.skill-context {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--accent);
+  line-height: 1.5;
 }
 
 .skill-grid,
@@ -398,6 +431,10 @@ main,
   padding: 1.1rem;
   background: rgba(255, 255, 255, 0.035);
   box-shadow: none;
+}
+
+#education .credential-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .contact-section {
@@ -438,15 +475,34 @@ main,
   margin-bottom: 0;
 }
 
+.project-card .project-type {
+  margin: 0.6rem 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.project-card h2 {
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+.project-list-heading {
+  padding-top: 1rem;
+}
+
 .project-card .inline-actions {
   margin-top: auto;
   padding-top: 1rem;
 }
 
 .interactive-section {
-  margin: 4rem 0 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--line);
+  margin: 2rem 0;
+  padding: clamp(1rem, 2.5vw, 1.75rem);
+  border: 1px solid rgba(99, 211, 145, 0.28);
+  border-radius: var(--radius);
+  background: rgba(99, 211, 145, 0.025);
 }
 
 .category-heading {
@@ -458,11 +514,11 @@ main,
 }
 
 .interactive-grid {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 0;
 }
 
 .interactive-card {
-  min-height: 19rem;
+  min-height: 0;
   border-color: rgba(99, 211, 145, 0.28);
 }
 
@@ -897,13 +953,17 @@ main,
   }
 
   .hero-panel {
-    width: min(520px, 100%);
+    width: min(340px, 100%);
     margin: 0 auto;
   }
 
   .metrics-strip,
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skills-section .skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .contact-actions {
@@ -941,6 +1001,10 @@ main,
   }
 
   .skill-grid,
+  .skills-section .skill-grid,
+  #education .credential-grid,
+  .metrics-strip,
+  .project-grid,
   .credential-grid,
   .modal-grid,
   .check-list,
@@ -965,4 +1029,9 @@ main,
     transform: rotate(90deg);
     justify-self: center;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button, .modal-button, .btn { transition: none; }
 }

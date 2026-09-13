@@ -15,7 +15,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=cc4e1ae" />
+  <link rel="stylesheet" href="style.css?v=20260913" />
 </head>
 <body>
   <header class="topbar">
@@ -32,181 +32,18 @@
   <main>
     <section class="page-hero">
       <p class="eyebrow">Selected Work</p>
-      <h1>Projects with operational edges, not just screenshots and buzzwords.</h1>
+      <h1>Projects &amp; interactive lab</h1>
       <p>
-        These are selected examples of how I work: understand the environment, improve visibility,
-        reduce risk, document decisions, and keep the result useful after the first demo.
+        Explore browser-based networking and security demonstrations, followed by selected infrastructure,
+        automation, and software projects. The project labels distinguish personal infrastructure,
+        independent development, and academic work.
       </p>
     </section>
 
-    <section class="project-grid featured-projects">
-      <article class="project-card featured">
-        <div class="project-icon"><i class="bi bi-shield-check"></i></div>
-        <h2>Bratsu SecureOps</h2>
-        <p>
-          AI-assisted managed IT and cybersecurity platform designed for small-business operations.
-          Brings asset visibility, security findings, guided remediation, and auditable operational
-          workflows into one maintainable system.
-        </p>
-        <div class="tech-badges">
-          <span>Cybersecurity</span><span>Managed IT</span><span>AI</span><span>Automation</span><span>Operations</span>
-        </div>
-        <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="secureops-modal">Details</button>
-        </div>
-      </article>
-
-      <article class="project-card featured">
-        <div class="project-icon"><i class="bi bi-window-stack"></i></div>
-        <h2>Context Window</h2>
-        <p>
-          Next.js and Electron knowledge-capture app for saving project context, extracted notes,
-          and reusable work history. Designed to reduce repeated discovery across coding,
-          infrastructure, and documentation projects.
-        </p>
-        <div class="tech-badges">
-          <span>Next.js</span><span>TypeScript</span><span>Electron</span><span>Local Data</span>
-        </div>
-        <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="context-modal">Details</button>
-          <a href="https://github.com/BrandonTsueda/context-window" class="text-link" target="_blank" rel="noopener noreferrer">Repository</a>
-        </div>
-      </article>
-
-      <article class="project-card featured">
-        <div class="project-icon"><i class="bi bi-hdd-rack"></i></div>
-        <h2>Proxmox Homelab Infrastructure</h2>
-        <p>
-          Production-style home infrastructure with Proxmox, Linux containers, VMs, DNS,
-          reverse proxying, VPN access, AI tooling, media automation, monitoring, backups,
-          and ongoing hardening. Maintained with real uptime and recovery expectations.
-        </p>
-        <div class="tech-badges">
-          <span>Proxmox</span><span>Linux</span><span>Docker</span><span>Nginx</span><span>Tailscale</span>
-        </div>
-        <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="homelab-modal">Details</button>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon"><i class="bi bi-journal-text"></i></div>
-        <h2>Class Instruction Condenser</h2>
-        <p>
-          Desktop utility that condenses long class instructions into practical task briefs.
-          Built for faster academic workflow intake while preserving deliverables, requirements,
-          and grading-sensitive details.
-        </p>
-        <div class="tech-badges">
-          <span>Python</span><span>Tkinter</span><span>Testing</span><span>Desktop App</span>
-        </div>
-        <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="class-modal">Details</button>
-          <a href="https://github.com/BrandonTsueda/ClassInstructionCondenser" class="text-link" target="_blank" rel="noopener noreferrer">Repository</a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon"><i class="bi bi-broadcast"></i></div>
-        <h2>Media Update Broadcaster</h2>
-        <p>
-          Notification workflow for broadcasting media update status to Discord and local channels.
-          Structured around reusable configuration, clear logging, and operational visibility.
-        </p>
-        <div class="tech-badges">
-          <span>Python</span><span>Discord Webhook</span><span>Automation</span><span>Logging</span>
-        </div>
-        <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="media-modal">Details</button>
-          <a href="https://github.com/BrandonTsueda/media-update-broadcaster" class="text-link" target="_blank" rel="noopener noreferrer">Repository</a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon"><i class="bi bi-cpu"></i></div>
-        <h2>Bratsu Agent &amp; Nemo-Claw</h2>
-        <p>
-          Private agent environment spanning local infrastructure and an MSI AI workstation.
-          Designed for persistent project context, tool-assisted operations, secure remote access,
-          and recoverable automation rather than a generic chat interface.
-        </p>
-        <div class="tech-badges">
-          <span>AI Agents</span><span>Local-First</span><span>Proxmox</span><span>Windows</span><span>Security</span>
-        </div>
-        <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="ai-modal">Details</button>
-        </div>
-      </article>
-
-      <article class="project-card featured">
-        <div class="project-icon"><i class="bi bi-play-btn"></i></div>
-        <h2>Ansible Touchscreen Console</h2>
-        <p>
-          Raspberry Pi 5 control surface for running categorized infrastructure playbooks,
-          following execution in real time, stopping unsafe runs, and reviewing clear completion
-          outcomes across Linux and Windows systems.
-        </p>
-        <div class="tech-badges">
-          <span>Ansible</span><span>Docker</span><span>Raspberry Pi</span><span>Linux</span><span>Windows</span>
-        </div>
-        <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="ansible-modal">Details</button>
-        </div>
-      </article>
-
-      <article class="project-card featured">
-        <div class="project-icon"><i class="bi bi-activity"></i></div>
-        <h2>Homelab Observability Platform</h2>
-        <p>
-          Fleet monitoring built around Prometheus and Grafana with host-level CPU, memory, disk,
-          network, GPU, service availability, and local-readiness views. Alerting is tied to
-          actionable dependencies instead of raw metric noise.
-        </p>
-        <div class="tech-badges">
-          <span>Prometheus</span><span>Grafana</span><span>Exporters</span><span>Alerting</span><span>Telemetry</span>
-        </div>
-        <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="observability-modal">Details</button>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon"><i class="bi bi-bar-chart-line"></i></div>
-        <h2>Business Analytics Site</h2>
-        <p>
-          Analytics site presenting process analysis, operations analysis, decision analysis,
-          and Power BI-style dashboard thinking in a clean web format.
-        </p>
-        <div class="tech-badges">
-          <span>Power BI</span><span>HTML</span><span>Process Analysis</span><span>BI</span>
-        </div>
-        <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="analytics-modal">Details</button>
-          <a href="business-analytics-site.html" class="text-link">Project page</a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon"><i class="bi bi-window"></i></div>
-        <h2>Story Generator</h2>
-        <p>
-          Modernized C# Windows Forms application for generating short custom stories with genre-aware
-          templates, audio controls, copy support, and text export capability.
-        </p>
-        <div class="tech-badges">
-          <span>C#</span><span>Windows Forms</span><span>.NET 8</span>
-        </div>
-        <div class="inline-actions">
-          <button class="modal-button secondary" type="button" data-modal-target="story-modal">Details</button>
-          <a href="story-generator.html" class="text-link">Project page</a>
-        </div>
-      </article>
-    </section>
-
-    <section class="interactive-section" aria-labelledby="interactive-title">
+    <section class="interactive-section" id="interactive-lab" aria-labelledby="interactive-title">
       <div class="section-heading category-heading">
         <p class="eyebrow">Interactive Lab</p>
-        <h2 id="interactive-title">Try the work instead of only reading about it.</h2>
+        <h2 id="interactive-title">Explore networking and security concepts.</h2>
         <p>These demonstrations run entirely in your browser. Entered values are not transmitted, stored, or logged.</p>
       </div>
 
@@ -243,6 +80,182 @@
         </article>
       </div>
     </section>
+    <div class="section-heading project-list-heading">
+      <p class="eyebrow">Selected work</p>
+      <h2>Infrastructure, automation, and software</h2>
+    </div>
+    <section class="project-grid featured-projects">
+      <article class="project-card featured">
+        <div class="project-icon"><i class="bi bi-shield-check"></i></div>
+        <p class="project-type">Independent development · In progress</p>
+        <h2>Bratsu SecureOps</h2>
+        <p>
+          An independent development project exploring managed IT and cybersecurity workflows for small
+          businesses, including asset visibility, security findings, and guided remediation.
+        </p>
+        <div class="tech-badges">
+          <span>Cybersecurity</span><span>Managed IT</span><span>AI</span><span>Automation</span><span>Operations</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="secureops-modal">Details</button>
+        </div>
+      </article>
+
+      <article class="project-card featured">
+        <div class="project-icon"><i class="bi bi-window-stack"></i></div>
+        <p class="project-type">Independent software project</p>
+        <h2>Context Window</h2>
+        <p>
+          Next.js and Electron knowledge-capture app for saving project context, extracted notes,
+          and reusable work history. Designed to reduce repeated discovery across coding,
+          infrastructure, and documentation projects.
+        </p>
+        <div class="tech-badges">
+          <span>Next.js</span><span>TypeScript</span><span>Electron</span><span>Local Data</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="context-modal">Details</button>
+          <a href="https://github.com/BrandonTsueda/context-window" class="text-link" target="_blank" rel="noopener noreferrer">Repository</a>
+        </div>
+      </article>
+
+      <article class="project-card featured">
+        <div class="project-icon"><i class="bi bi-hdd-rack"></i></div>
+        <p class="project-type">Personal infrastructure</p>
+        <h2>Proxmox Homelab Infrastructure</h2>
+        <p>
+          Personal infrastructure using Proxmox, Linux containers, virtual machines, DNS, remote access,
+          monitoring, and backups. Used to host services and test maintenance and recovery procedures.
+        </p>
+        <div class="tech-badges">
+          <span>Proxmox</span><span>Linux</span><span>Docker</span><span>Nginx</span><span>Tailscale</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="homelab-modal">Details</button>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon"><i class="bi bi-journal-text"></i></div>
+        <p class="project-type">Independent software project</p>
+        <h2>Class Instruction Condenser</h2>
+        <p>
+          Desktop utility that condenses long class instructions into practical task briefs.
+          Built for faster academic workflow intake while preserving deliverables, requirements,
+          and grading-sensitive details.
+        </p>
+        <div class="tech-badges">
+          <span>Python</span><span>Tkinter</span><span>Testing</span><span>Desktop App</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="class-modal">Details</button>
+          <a href="https://github.com/BrandonTsueda/ClassInstructionCondenser" class="text-link" target="_blank" rel="noopener noreferrer">Repository</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon"><i class="bi bi-broadcast"></i></div>
+        <p class="project-type">Personal automation project</p>
+        <h2>Media Update Broadcaster</h2>
+        <p>
+          Notification workflow for broadcasting media update status to Discord and local channels.
+          Structured around reusable configuration, clear logging, and operational visibility.
+        </p>
+        <div class="tech-badges">
+          <span>Python</span><span>Discord Webhook</span><span>Automation</span><span>Logging</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="media-modal">Details</button>
+          <a href="https://github.com/BrandonTsueda/media-update-broadcaster" class="text-link" target="_blank" rel="noopener noreferrer">Repository</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon"><i class="bi bi-cpu"></i></div>
+        <p class="project-type">Personal AI infrastructure</p>
+        <h2>Bratsu Agent &amp; Nemo-Claw</h2>
+        <p>
+          Private agent environment spanning local infrastructure and an MSI AI workstation.
+          Designed for persistent project context, tool-assisted operations, secure remote access,
+          and recoverable automation.
+        </p>
+        <div class="tech-badges">
+          <span>AI Agents</span><span>Local-First</span><span>Proxmox</span><span>Windows</span><span>Security</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="ai-modal">Details</button>
+        </div>
+      </article>
+
+      <article class="project-card featured">
+        <div class="project-icon"><i class="bi bi-play-btn"></i></div>
+        <p class="project-type">Personal infrastructure project</p>
+        <h2>Ansible Touchscreen Console</h2>
+        <p>
+          Raspberry Pi 5 control surface for running categorized infrastructure playbooks,
+          following execution in real time, stopping unsafe runs, and reviewing clear completion
+          outcomes across Linux and Windows systems.
+        </p>
+        <div class="tech-badges">
+          <span>Ansible</span><span>Docker</span><span>Raspberry Pi</span><span>Linux</span><span>Windows</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="ansible-modal">Details</button>
+        </div>
+      </article>
+
+      <article class="project-card featured">
+        <div class="project-icon"><i class="bi bi-activity"></i></div>
+        <p class="project-type">Personal monitoring project</p>
+        <h2>Homelab Observability Platform</h2>
+        <p>
+          Fleet monitoring built around Prometheus and Grafana with host-level CPU, memory, disk,
+          network, GPU, service availability, and local-readiness views. Alerting is tied to
+          service dependencies to support fault investigation and recovery checks.
+        </p>
+        <div class="tech-badges">
+          <span>Prometheus</span><span>Grafana</span><span>Exporters</span><span>Alerting</span><span>Telemetry</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="observability-modal">Details</button>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon"><i class="bi bi-bar-chart-line"></i></div>
+        <p class="project-type">Academic project</p>
+        <h2>Business Analytics Site</h2>
+        <p>
+          Analytics site presenting process analysis, operations analysis, decision analysis,
+          and Power BI-style dashboard thinking in a clean web format.
+        </p>
+        <div class="tech-badges">
+          <span>Power BI</span><span>HTML</span><span>Process Analysis</span><span>BI</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="analytics-modal">Details</button>
+          <a href="business-analytics-site.html" class="text-link">Project page</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon"><i class="bi bi-window"></i></div>
+        <p class="project-type">Independent software project</p>
+        <h2>Story Generator</h2>
+        <p>
+          Modernized C# Windows Forms application for generating short custom stories with genre-aware
+          templates, audio controls, copy support, and text export capability.
+        </p>
+        <div class="tech-badges">
+          <span>C#</span><span>Windows Forms</span><span>.NET 8</span>
+        </div>
+        <div class="inline-actions">
+          <button class="modal-button secondary" type="button" data-modal-target="story-modal">Details</button>
+          <a href="story-generator.html" class="text-link">Project page</a>
+        </div>
+      </article>
+    </section>
+
   </main>
 
   <dialog class="detail-modal" id="secureops-modal" aria-labelledby="secureops-title">
@@ -252,13 +265,13 @@
         <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
       </div>
       <div class="modal-body">
-        <p>An AI-assisted managed IT and cybersecurity platform built for small organizations that need practical visibility and defensible operational workflows without enterprise-scale complexity.</p>
+        <p>An independent development project exploring managed IT and cybersecurity workflows for small businesses. The design brings together asset visibility, security findings, and guided remediation.</p>
         <div class="architecture-flow" aria-label="Bratsu SecureOps architecture">
           <span>Managed endpoints</span><i class="bi bi-arrow-right"></i><span>SecureOps control plane</span><i class="bi bi-arrow-right"></i><span>Evidence &amp; remediation</span>
         </div>
         <ul>
-          <li>Unifies asset context, findings, remediation guidance, and operational evidence.</li>
-          <li>Uses AI as an assistive layer while keeping actions reviewable and auditable.</li>
+          <li>Developing workflows for asset context, findings, remediation guidance, and operational evidence.</li>
+          <li>Exploring AI-assisted guidance with reviewable actions and documented operational evidence.</li>
           <li>Developed with secure deployment, maintainability, and small-business usability in mind.</li>
         </ul>
       </div>
@@ -272,7 +285,7 @@
         <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
       </div>
       <div class="modal-body">
-        <p>A desktop app for capturing project context, reusable notes, and work history so repeated discovery does not eat every new session. It reflects how I actually work across infrastructure, code, and documentation tasks.</p>
+        <p>A desktop app for capturing project context, reusable notes, and work history for reuse across infrastructure, code, and documentation tasks.</p>
         <ul>
           <li>Next.js interface packaged with Electron for local use.</li>
           <li>Focused on preserving context across long-running projects.</li>
@@ -292,7 +305,7 @@
         <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
       </div>
       <div class="modal-body">
-        <p>This is the environment behind much of my learning and project work: Proxmox, Debian, LXCs, Docker, reverse proxying, DNS, VPN access, monitoring, AI services, and media automation. It gives me real failure modes to troubleshoot and real maintenance tradeoffs to manage.</p>
+        <p>I maintain a personal infrastructure environment with Proxmox, Debian, LXCs, Docker, reverse proxying, DNS, VPN access, monitoring, AI services, and media automation. I use it to investigate service failures, test configuration changes, and practice recovery procedures.</p>
         <ul>
           <li>Services are treated as living systems with uptime, access, backup, and recovery concerns.</li>
           <li>Monitoring and automation projects are tested against real hosts and containers.</li>
@@ -309,7 +322,7 @@
         <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
       </div>
       <div class="modal-body">
-        <p>A local Tkinter app that turns long assignment instructions into clear task briefs. The value is less about flash and more about preserving grading-sensitive details while making the work easier to execute.</p>
+        <p>A local Tkinter app that turns long assignment instructions into clear task briefs. It organizes deliverables, requirements, and grading criteria into a concise task brief.</p>
         <ul>
           <li>Built with Python, Tkinter, tests, and a packaged Windows executable.</li>
           <li>Separates deliverables, constraints, and submission requirements.</li>
@@ -463,7 +476,7 @@
         </div>
         <ul>
           <li>Tracks Linux, Windows, Proxmox, GPU, storage, service, and network telemetry.</li>
-          <li>Provides fleet-overview and host-detail visualizations instead of exposing raw Prometheus queries.</li>
+          <li>Provides fleet-overview and host-detail dashboards for interpreting monitoring data.</li>
           <li>Routes alerts around actionable dependency failures and verifies recovery at the affected service.</li>
         </ul>
       </div>
@@ -493,7 +506,7 @@
         <button class="modal-close" type="button" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
       </div>
       <div class="modal-body">
-        <p>An early C# WinForms project revisited with a cleaner .NET 8 build, genre-aware templates, export options, and a more polished Windows experience. It is intentionally lighter than the infrastructure work, but it shows follow-through on packaging and usability.</p>
+        <p>An early C# WinForms project revisited with a cleaner .NET 8 build, genre-aware templates, export options, and a more polished Windows experience. The update focuses on packaging, export options, and everyday usability.</p>
         <div class="modal-actions">
           <a class="button primary" href="story-generator.html">Open project page</a>
         </div>
@@ -505,6 +518,6 @@
     <p>&copy; 2026 Brandon Tsueda. All Rights Reserved.</p>
   </footer>
 
-  <script src="site.js?v=cc4e1ae"></script>
+  <script src="site.js?v=20260913"></script>
 </body>
 </html>
