@@ -7,7 +7,8 @@ Source for [www.brandontsueda.com](https://www.brandontsueda.com), a static prof
 - `index.html` - professional profile, experience, skills, education, and contact links
 - `projects.html` - selected projects and accessible detail dialogs
 - `style.css` / `site.js` - shared presentation and interaction behavior
-- `generate_resume.py` - reproducible public resume generator
+- `Brandon_Tsueda_Resume.pdf` - authoritative user-supplied resume, replaced September 13, 2026
+- `generate_resume.py` - legacy resume generator; does not reproduce the current supplied PDF
 - `scripts/validate_site.py` - local-link, metadata, and structural validation
 - `DEPLOYMENT.md` - GitHub Pages deployment and rollback procedure
 
@@ -17,7 +18,7 @@ Source for [www.brandontsueda.com](https://www.brandontsueda.com), a static prof
 python scripts/validate_site.py
 ```
 
-Regenerate the resume after changing its source:
+Only when explicitly replacing the supplied PDF with the legacy generated version:
 
 ```powershell
 python generate_resume.py

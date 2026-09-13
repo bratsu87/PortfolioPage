@@ -11,7 +11,7 @@
 ## Release procedure
 
 1. Confirm the working tree is clean except for the intended change.
-2. Run `python generate_resume.py` if resume content changed.
+2. For a user-supplied resume, copy the exact PDF to `Brandon_Tsueda_Resume.pdf` and verify matching SHA-256 hashes. Do not run the legacy generator unless explicitly requested.
 3. Run `python scripts/validate_site.py`.
 4. Review the diff, commit, and push `main`.
 5. Wait for GitHub Pages to report `built`.
