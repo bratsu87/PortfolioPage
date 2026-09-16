@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
-HTML_FILES = sorted(ROOT.glob("*.html"))
+HTML_FILES = sorted([*ROOT.glob("*.html"), *(ROOT / "lab").glob("*.html")])
 REQUIRED_FILES = (
     "index.html",
     "projects.html",
